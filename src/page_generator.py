@@ -24,6 +24,8 @@ def generate_page(src_file, template_path, dest_folder, basepath):
         print("HTML Template file not found")
         return 2
     
+    print(basepath)
+
     page_title = extract_title(markdown)
     page_content_html_node = markdown_to_html_node(markdown)
     page_content_html = page_content_html_node.to_html()
