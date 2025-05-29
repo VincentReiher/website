@@ -1,10 +1,10 @@
 import os, shutil
 
-def initialize_public_directory():
-    if os.path.exists("public/"):
-        shutil.rmtree("public/")
+def initialize_public_directory(dir):
+    if os.path.exists(dir):
+        shutil.rmtree(dir)
 
-    copy_directory("static/", "public/")
+    copy_directory("static/", dir)
 
 def copy_directory(source_dir, target_dir):
     
